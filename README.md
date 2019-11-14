@@ -4,12 +4,22 @@ Server stellt die Methode Multiply und Divide bereit, erreichbar unter localhost
 
 Client ruft die Methoden über net.rpc.
 
-## Ausführen
+## Build
 
-```go
-go build server\server.go
+```
+go build server/server.go
 ```
 
-```go
-go build client\client.go
+```
+go build client/client.go
+```
+
+## Ausführen
+
+```
+server
+```
+
+```
+client
 ```
