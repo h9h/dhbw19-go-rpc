@@ -16,6 +16,10 @@ type Quotient struct {
 	Quo, Rem int
 }
 
+// Functions that should be exposed must conform to this schema:
+//
+//		func (t *T) MethodName(argType T1, replyType *T2) error
+//
 type Arith int
 
 func (t *Arith) Multiply(args *Args, reply *int) error {
@@ -40,7 +44,7 @@ func main() {
 	// Publish the server methods
 	err := rpc.Register(arith)
 	if err != nil {
-		log.Fatal("Publiskinh server methods failed ", err)
+		log.Fatal("Publishing server methods failed ", err)
 	}
 	// Register a HTTP handler
 	rpc.HandleHTTP()
